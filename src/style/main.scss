@@ -1,0 +1,10 @@
+@import "./utils/breakpoints";
+@import "./utils/variables";
+
+@import "./base/reset";
+
+@import "./components/header";
+@import "./components/languageInput";
+@import "./components/section";
+@import "./components/projectCard";
+@import "./components/footer";

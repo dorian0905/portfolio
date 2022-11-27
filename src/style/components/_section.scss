@@ -1,0 +1,79 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 50px;
+    &__box {
+        max-width: 950px;
+        width: 100%;
+        border-style: solid;
+        border-image: linear-gradient(145deg, $dark 50%, $light) 1;
+        border-image-width: 1px;
+        margin: 50px;
+        margin-bottom: 100px;
+        @media (max-width: map-get($breakpoints-max, s)) {
+            margin: 40px;
+            margin-bottom: 100px;
+        }
+        @media (max-width: map-get($breakpoints-max, xs)) {
+            margin: 20px;
+            margin-bottom: 100px;
+        }
+        &__container {
+            padding: 80px 0;
+            @media (max-width: map-get($breakpoints-max, m)) {
+                padding: 60px 0;
+            }
+            @media (max-width: map-get($breakpoints-max, s)) {
+                padding: 40px 0;
+            }
+            @media (max-width: map-get($breakpoints-max, xs)) {
+                padding: 20px 0;
+            }
+            &__text {
+                padding: 0 80px;
+                @media (max-width: map-get($breakpoints-max, m)) {
+                    padding: 0 60px;
+                    font-size: 0.9em;
+                }
+                @media (max-width: map-get($breakpoints-max, s)) {
+                    padding: 0 40px;
+                    font-size: 0.85em;
+                }
+                @media (max-width: map-get($breakpoints-max, xs)) {
+                    padding: 0 20px;
+                    font-size: 0.8em;
+                }
+                &__title {
+                    font-size: 4em;
+                    font-weight: 100;
+                    @media (max-width: map-get($breakpoints-max, xs)) {
+                        font-size: 2.5em;
+                    }
+                }
+                &__separator {
+                    width: 120px;
+                    margin: 30px 0 35px 0;
+                    border-bottom: 1px solid #e3e7ea;
+                    margin-left: 30px;
+                }
+                &__description {
+                    font-size: 1.2em;
+                    line-height: 1.8em;
+                    font-weight: 300;
+                    margin-bottom: 10px;
+                }
+            }
+            &__projects {
+                margin-top: 45px;
+                display: flex;
+                justify-content: space-evenly;
+                @media (max-width: map-get($breakpoints-max, m)) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: $dark;
+    z-index: 2;
+    &__name {
+        position: absolute;
+        top: 12px;
+        left: 40px;
+        font-size: 1.2em;
+        font-weight: 500;
+        @media (max-width: map-get($breakpoints-max, s)) {
+            display: none;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: center;
+        &__list {
+            display: flex;
+            &__item {
+                &__link {
+                    display: inline-block;
+                    border-bottom: 2px solid $dark;
+                    margin: 0 10px;
+                    padding: 15px;
+                    font-weight: 400;
+                    transition-duration: 0.3s;
+                    &:hover {
+                        color: rgba($light, 0.7);
+                    }
+                    &.active {
+                        border-bottom: 2px solid $light;
+                        color: $light;
+                    }
+                }
+            }
+        }
+    }
+    &__language {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        @media (max-width: map-get($breakpoints-max, xs)) {
+            right: 20px;
+        }
+    }
+}
